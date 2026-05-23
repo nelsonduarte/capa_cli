@@ -61,7 +61,7 @@ so the install refuses any tag not signed by the right key:
 ```toml
 [dependencies.capa_cli]
 git = "https://github.com/nelsonduarte/capa_cli"
-tag = "v0.1.1"
+tag = "v0.1.2"
 verify_key = "6C1D222D491FB88031E041A536CFB426101AA24B"
 ```
 
