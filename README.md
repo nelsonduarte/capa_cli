@@ -52,6 +52,23 @@ it walks four scenarios (success, defaults, `--help`, missing
 positional) using hardcoded args so the smoke output is
 deterministic.
 
+## Install via capa.toml
+
+Capa's package manager fetches this library on `capa install`.
+Production-grade snippet, with the publisher's GPG fingerprint
+so the install refuses any tag not signed by the right key:
+
+```toml
+[dependencies.capa_cli]
+git = "https://github.com/nelsonduarte/capa_cli"
+tag = "v0.1.1"
+verify_key = "6C1D222D491FB88031E041A536CFB426101AA24B"
+```
+
+`capa install` runs `git verify-tag` against your GPG keyring;
+import the publisher's key first (see [`SECURITY.md`](SECURITY.md)
+for the fingerprint provenance and `gpg --import` instructions).
+
 ## API surface
 
 ### Schema (from `capa_cli.parser`)
